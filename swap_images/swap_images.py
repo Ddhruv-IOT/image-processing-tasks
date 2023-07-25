@@ -7,6 +7,7 @@ Created on Sat Dec 11 22:57:19 2021
 
 import matplotlib.pyplot as plt
 import cv2
+import time
 
 
 def load_img(img):
@@ -93,12 +94,26 @@ def swap(img_obj1, img_obj2):
 
 
 if __name__ == "__main__":
+    print("Loading the first image...")
     img_obj1 = load_img("d1.jpg")  # dore
     render(img_obj1)
+    time.sleep(2)
 
+    print("Loading the second image...")
     img_obj2 = load_img("10.jpg")  # man
     render(img_obj2)
+    time.sleep(2)
 
+    print("Swapping the faces...")
     s1, s2 = swap(img_obj1, img_obj2)
+    time.sleep(2)
+    
+    print("Displaying the swapped faces...")
+    print("Swapped face 1:")
     render(s1)
+    time.sleep(2)
+    
+    print("Swapped face 2:")
     render(s2)
+    time.sleep(2)
+    print("Done!")
