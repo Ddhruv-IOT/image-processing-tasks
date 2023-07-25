@@ -6,6 +6,7 @@ Created on Sat Dec 11 12:14:08 2021
 """
 import matplotlib.pyplot as plt
 from PIL import Image
+import time
 
 
 def render_img(img):
@@ -139,10 +140,21 @@ def img_merge(img_1, img_2, master_size):
 
 if __name__ == "__main__":
     print("Running image_merger.py as main script...")
+    time.sleep(1)
+    
     print("Displaying image 1.jpg...")
     img_1 = render_img("1.jpg")
+    time.sleep(2)
+    
     print("Displaying image 2.jpg...")
     img_2 = render_img("2.jpg")
+    time.sleep(2)
+    
     print("Merging images 1.jpg and 2.jpg...")
     print("Merged image saved as merged.jpg")
+    time.sleep(1)
+    
     (img_merge(img_1, img_2, auto_resize(img_1, img_2)))
+    time.sleep(1)
+    
+    print("Exiting image_merger.py...")
